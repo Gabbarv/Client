@@ -187,3 +187,18 @@ padding: 5px;
   display: inline-block;
   width: 100px;
 }
+
+@media only screen and (max-width: 600px){
+  .choose-service input{
+    width: 100%;
+    margin-left: initial;
+    padding: 5px;
+
+    
+    }
+    .choose-service select{
+      width: 100%;
+      margin-left: initial;
+      margin-bottom: 20px;
+    }
+}
