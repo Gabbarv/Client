@@ -6,7 +6,7 @@ import Slide from "./Carousel";
 
 function Services({service,loggedIn,setLoggedin}){
     return (
-        <div className="service-info">
+        <div id={service.title} className="service-info">
             <div className="service-name" data-aos="fade-up"
      data-aos-duration="1000">
                 <h1>{service.title}</h1>

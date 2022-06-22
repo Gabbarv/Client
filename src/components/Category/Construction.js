@@ -65,7 +65,7 @@ function Construction(){
           <ToastContainer/>
           </div>
          
-            
+          <ServiceList/>
            
              <div className="main">
        <div className="heading" data-aos="fade-up"
@@ -73,6 +73,7 @@ function Construction(){
          <h2>Featured Services</h2>
          <span>What do you need to find?</span>
        </div>
+      
        <div className="service-s">
            
            

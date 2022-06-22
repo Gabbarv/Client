@@ -16,7 +16,7 @@ function Card({item,loggedIn,setLoggedin}){
     }} className="service-card-d">
        <img src={item.img}/>
        <p>{item.name}</p>
-    </div> : <div onClick={() => { setShowlogin(true)
+    </div> : <div  onClick={() => { setShowlogin(true)
     }} className="service-card-m">
         <img src={item.img}/>
         <p>{item.name}</p>

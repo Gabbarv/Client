@@ -1,50 +1,62 @@
 const items = [{
     name: "Home",
-    icon: "https://img.icons8.com/color/96/000000/exterior.png"
+    icon: "https://img.icons8.com/nolan/64/A3A1FF/3A3897/home-page.png",
+    id: "#Home Services"
 },
 {
     name: "Construction",
-    icon: "https://img.icons8.com/office/16/000000/workers-female.png"
+    icon: "https://img.icons8.com/nolan/64/A3A1FF/3A3897/workers-male.png",
+    id:   "#Construction"
 },
 {
     name: "Repair",
-    icon: "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-repair-racing-flaticons-lineal-color-flat-icons-3.png"
+    icon: "https://img.icons8.com/nolan/64/A3A1FF/3A3897/maintenance.png",
+    id:   "#Appliance services and repair"
 },
 {
     name: "Legal Consultancy",
-    icon: "https://img.icons8.com/external-icongeek26-flat-icongeek26/64/000000/external-legal-business-and-finance-icongeek26-flat-icongeek26.png"
+    icon: "https://img.icons8.com/nolan/64/A3A1FF/3A3897/scales.png",
+    id:   "#Legal Consultancy"
 },
 {
     name: "Photography",
-    icon: "https://img.icons8.com/color/48/000000/multiple-cameras.png"
+    icon: "https://img.icons8.com/nolan/64/A3A1FF/3A3897/compact-camera.png",
+    id:   "#Photography and videography"
 },
 {
     name: "Events",
-    icon: "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-events-security-guard-flaticons-lineal-color-flat-icons-2.png"
+    icon: "https://img.icons8.com/nolan/64/A3A1FF/3A3897/event-accepted.png",
+    id:   "#Events Management and caterers"
 },
 {
     name: "Architecture",
-    icon: "https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/000000/external-india-gate-diwali-vitaliy-gorbachev-flat-vitaly-gorbachev.png"
+    icon: "https://img.icons8.com/nolan/64/A3A1FF/3A3897/parliament.png",
+    id:   "#Architecture"
 },
 {
     name: "Printing",
-    icon: "https://img.icons8.com/officel/16/000000/label-printer.png"
+    icon: "https://img.icons8.com/nolan/64/A3A1FF/3A3897/print.png",
+    id:   "#Printing"
 },
 {
     name: "Web Development",
-    icon: "https://img.icons8.com/external-filled-color-icons-papa-vector/78/000000/external-Web-Developer-coding-filled-color-icons-papa-vector.png"
+    icon: "https://img.icons8.com/nolan/64/A3A1FF/3A3897/backend-development.png",
+    id:   "#Web Development"
 },
 {
     name: "Solar System",
-    icon: "https://img.icons8.com/external-yogi-aprelliyanto-outline-color-yogi-aprelliyanto/32/000000/external-solar-system-space-traveler-yogi-aprelliyanto-outline-color-yogi-aprelliyanto.png"
+    icon: "https://img.icons8.com/nolan/64/A3A1FF/3A3897/solar-energy.png",
+    id:   "#Solar System"
 },
 {
     name: "Physiothearapy And Accupressure",
-    icon: "https://img.icons8.com/color/48/000000/doctor-male-skin-type-4.png"
+    icon: "https://img.icons8.com/nolan/64/A3A1FF/3A3897/medical-doctor.png",
+    id:   "#Physiothearapy And Accupressure"
 },
 {
     name: "Beautician And Mehndi",
-    icon: "https://img.icons8.com/dusk/64/000000/beautician.png"
+    icon: "https://img.icons8.com/nolan/64/A3A1FF/3A3897/barbershop.png",
+    id:   "#Beautician And Mehndi"
 }];
 
 export default items;
