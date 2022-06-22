@@ -1,7 +1,7 @@
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 600;
   }
   .logo{
     width: 100px;
@@ -56,4 +56,11 @@ margin-bottom: 20px;
 }
 .searchbtn{
   background-color: #fff;
+}
+.navbar-dark .navbar-nav .partner{
+  color: #fff;
+  opacity: .8;
+  font-weight: 200;
+  text-decoration: underline;
+  cursor: pointer;
 }

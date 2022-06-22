@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-function Loginmodal({info,setlogin,loggedIn,setLoggedin,iname}){
+function SellerForm({setlogin,loggedIn,setLoggedin,setShowseller}){
     var [showLogin,setShowlogin] = useState(false);
     var [showOtp,setShowOtp]=useState(false);
     const [showForm,setShowForm]=useState(false);
@@ -18,6 +18,7 @@ function Loginmodal({info,setlogin,loggedIn,setLoggedin,iname}){
     const [final, setfinal] = useState('');
     const [name,setName] = useState("");
     const [address,setAddress] = useState("");
+    const [service,setService] = useState("")
     
     const notify = () => toast("Thanks For Your Response.We Will Contact You Soon");
     const phone= localStorage.getItem("phone");
@@ -58,15 +59,15 @@ function Loginmodal({info,setlogin,loggedIn,setLoggedin,iname}){
    },[user]);
    useEffect((e) => {
     console.log(otp)
-   },[mobNo,otp,name,address,callTime]);
+   },[mobNo,otp,name,address,callTime,service]);
    const handleSubmit = (e) => {
     e.preventDefault();
-   let service = iname;
+   
    var today = new Date();
    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
    var dateTime = date+' '+time;
-    db.collection("buyer")
+    db.collection("seller")
       .add({
         name: name,
         address: address,
@@ -145,7 +146,7 @@ const ValidateOtp = (e) => {
            onClick={() => {
            
             
-             setlogin(false);
+             setShowseller(false);
              
              
            }}
@@ -172,7 +173,7 @@ const ValidateOtp = (e) => {
              
              setShowlogin(false);
              setShowOtp(false);
-             setlogin(false);
+             setShowseller(false);
               
             }}
           >
@@ -202,7 +203,7 @@ const ValidateOtp = (e) => {
               setShowlogin(false);
          
           setShowForm(false);
-          setlogin(false);
+          setShowseller(false);
             
           }}
         >
@@ -216,17 +217,17 @@ const ValidateOtp = (e) => {
               setShowlogin(false);
          
           setShowForm(false);
-          setlogin(false);}}>
+          setShowseller(false);}}>
               <label>Full Name</label>
               <input onChange={(e) => setName(e.target.value)}  type="text" placeholder="Enter Your Name" required/>
               <label>Mobile No</label>
               <input  value={phone} type="text" disabled/>
               <label>Address <span>(Optional)</span></label>
               <textarea rows="4"  onChange={(e) => setAddress(e.target.value)}></textarea>
-              <div className="choose-service">
-              <label for="service">Selected Service:</label>
-              <input type="text" name="service" value={iname} disabled/>
-              </div>
+              
+              <label>Service You Offer</label>
+              <input onChange={(e) => setService(e.target.value)} type="text" placeholder="Enter Service You Offer" name="service" value={service} />
+        
               <div className="choose-service">
               <label for="service">Available Time To Take Call:</label>
               <select onChange={(e) => setCallTime(e.target.value)} name="callingtime">
@@ -249,4 +250,4 @@ const ValidateOtp = (e) => {
 }
 
 
-export default Loginmodal;
+export default SellerForm;
