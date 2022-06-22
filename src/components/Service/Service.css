@@ -1,0 +1,119 @@
+.service-card-d img{
+    width: 266px;
+    height: 149px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .2s;
+}
+.service-info{
+    text-align: center;
+    border-top: 16px solid #f2f4f6;
+}
+.service-name{
+padding: 60px 64px 0;
+}
+.service-name h1{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    margin: 0;
+    color: #212121;
+    text-transform: capitalize;
+}
+.services{
+    margin: 44px auto 64px;
+}
+.service-card-d p{
+    margin: 24px 0 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #212121;
+    text-align: center;
+    text-transform: capitalize;
+}
+.service-card-m img{
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .2s;
+  
+}
+.service-m{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    grid-auto-rows: 150px;
+    justify-content: center;
+    gap: 5rem 1rem;
+    
+}
+.service-card-m p{
+    margin: 14px 0 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #212121;
+    text-align: center;
+    text-transform: capitalize;
+    text-align: left;
+}
+.service-card-d img:hover{
+    transform: scale(1.05);
+}
+.service-card-m img:hover{
+    transform: scale(1.05);
+}
+@media only screen and (max-width: 320px){
+    .service-m{
+    
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 100px);
+        grid-auto-rows: 100px;
+        justify-content: center;
+        gap: 5rem 1rem;
+        
+    }
+    .service-card-m img{
+        width: 100px;
+        height: 90px;
+        border-radius: 4px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .service-name h1{
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 35px;
+        margin: 0;
+        color: #212121;
+        text-transform: capitalize;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* <img src="https://img.icons8.com/fluency/48/000000/home.png"/>
+    <img src="https://img.icons8.com/office/16/000000/workers-female.png"/>
+    <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-repair-racing-flaticons-lineal-color-flat-icons-3.png"/>
+    <img src="https://img.icons8.com/external-icongeek26-flat-icongeek26/64/000000/external-legal-business-and-finance-icongeek26-flat-icongeek26.png"/>
+    <img src="https://img.icons8.com/color/48/000000/multiple-cameras.png"/>
+    <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-events-security-guard-flaticons-lineal-color-flat-icons-2.png"/>
+    <img src="https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/000000/external-india-gate-diwali-vitaliy-gorbachev-flat-vitaly-gorbachev.png"/>
+    <img src="https://img.icons8.com/officel/16/000000/label-printer.png"/>
+    <img src="https://img.icons8.com/external-filled-color-icons-papa-vector/78/000000/external-Web-Developer-coding-filled-color-icons-papa-vector.png"/>
+    <img src="https://img.icons8.com/external-yogi-aprelliyanto-outline-color-yogi-aprelliyanto/32/000000/external-solar-system-space-traveler-yogi-aprelliyanto-outline-color-yogi-aprelliyanto.png"/>
+    <img src="https://img.icons8.com/color/48/000000/doctor-male-skin-type-4.png"/>
+    <img src="https://img.icons8.com/dusk/64/000000/beautician.png"/>
+
+
+*/

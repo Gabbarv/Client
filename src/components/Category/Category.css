@@ -1,0 +1,242 @@
+.section{
+   transition: .2s;
+    height: auto;
+ padding: .5% 2%;
+margin-top: 30px;
+
+}
+
+.about h3{
+    font-size: 40px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.about p{
+    font-size: 22px;
+    color: #fff;
+    font-weight: 400;
+    margin: 0;
+}
+.carousel-control-next-icon {
+    background-image: url("../images/line-angle-right.svg");
+}
+.carousel-control-prev-icon {
+    background-image: url("../images/line-angle-left.svg");
+}
+
+
+.howwork{
+   height: 100px;
+   width: 100px;
+   margin-top: 48px;
+   margin-left: auto;
+   margin-right: auto;
+   
+    
+}
+.howworksect{
+    text-align: center;
+}
+.hw{
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.heading{
+    padding: 40px 50px 50px 50px;
+    border-top: 50px solid #f2f4f6;
+    border-bottom: 34px solid #f2f4f6;
+    background: url(../images/background.png) no-repeat center;
+    background-size: 150px 150px;
+    text-align: center;
+    background-color: #f2f4f6;
+    
+}
+.heading h2{
+    font-size: 30px;
+    color: #2c3038;
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+}
+.heading span{
+    font-size: 18px;
+    color: #858585;
+    font-weight: bold;
+   
+}
+.slide{
+    padding-top: 50px;
+}
+.howworksect h6{
+    font-size: 18px;
+    color: #858585;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.howworksect h2{
+    font-size: 30px;
+    color: #2c3038;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.howworksect span{
+    font-size: 18px;
+    color: #858585;
+    font-weight: bold;
+}
+
+.footer h5{
+    text-align: left;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.bg-dark {
+    background-color: #343a40!important;
+}
+.rec-dot_active {
+    background-color: hsla(0,0%,100%,.5) !important;
+    box-shadow: 0 0 1px 3px #fff !important;
+}
+.rec-dot:focus,
+.rec-dot:hover {
+    box-shadow: 0 0 1px 3px #fff !important;
+}
+.rec-dot_active:focus,
+.rec-dot_active:hover {
+    background-color: hsla(0,0%,100%,.5) !important;
+    box-shadow: 0 0 1px 3px #fff !important;
+}
+.rec.rec-arrow:hover { border-radius: 50%; background-color: hsla(0,0%,100%,.5) !important; }
+.main{
+    
+    
+    width: 100%;
+    overflow-x: hidden;
+   
+}
+.slider{
+    margin-top: 20px;
+}
+.rec.rec-arrow:disabled {
+    visibility: hidden;
+}
+.rec.rec-arrow:enabled {
+    background-color: hsla(0,0%,100%,.5) !important;
+}
+
+.rec-dot{
+    visibility: hidden;
+}
+.service-s{
+    overflow-x: hidden;
+   overflow-y: hidden;
+}
+.top{
+    background: rgba(0, 0, 0, 0.5) url("../images/tile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    background-blend-mode: darken;
+    padding-bottom: 50px;
+}
+.Popular-s{
+  text-align: center;
+    margin-top: 50px;
+}
+.Popular-s h3{
+    display: inline-block;
+    color: #fff;
+
+}
+.Popular-s h4{
+    display: inline-block;
+    margin-left: 25px;
+    color: #fff;
+    border: 1px dashed #fff;
+    padding: 5px 20px;
+    border-radius: 25px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .5s;
+}
+.Popular-s h4:hover{
+    background-color: #000;
+    opacity: .6;
+    transform: scale(1.05);
+}
+
+.about{
+    margin-top: 100px;
+    color: #fff;
+    text-align: center;
+}
+.about h1{
+    font-size: 3rem;
+}
+.trust-img{
+    width: 150px;
+  
+}
+.trust{
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2%;
+}
+
+@media only screen and (max-width: 840px) {
+  
+    .rec-arrow{
+        display: none;
+    }
+  }
+  .head{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+     
+  }
+
+  @media only screen and (max-width: 570px){
+    .section{
+        transition: .2s;
+         height: auto;
+      padding: 0;
+     margin-top: 30px;
+     width: 90%;
+     margin-left: auto;
+     margin-right: auto;
+
+     
+     }
+     .Popular-s h4{
+        display: inline-block;
+        margin-left: 25px;
+        color: #fff;
+        border: 1px dashed #fff;
+        padding: 3px 12px;
+        border-radius: 25px;
+        font-size: 15px;
+    }
+  }
+  .section:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+  

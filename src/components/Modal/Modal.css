@@ -1,0 +1,189 @@
+.modalBackground {
+   height: 100%;
+   width: 100%;
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+   z-index: 110;
+   
+  
+   
+   
+  }
+  
+  .modalContainer {
+    width: 50%;
+    height: auto;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+   z-index: 110;
+    text-align: center;
+   
+  }
+  
+  .modalContainer .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .titleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+    padding: 5px;
+    
+  }
+  
+  .titleCloseBtn button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  /* .modalContainer .body {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    text-align: center;
+  } */
+  
+  .resend{
+    margin-top: 20px;
+  }
+ .resend .btn{
+   font-size: 15px;
+   width: 115px;
+   padding: 2px;
+   margin-left: 5px;
+ }
+  .image{
+    width: 100%;
+  }
+ .img-det{
+   width: 100%;
+   height: 300px;
+ 
+ }
+ .co_services{
+   display: flex;
+   flex-wrap: wrap;
+   list-style-type: none;
+   text-align: left;
+ }
+ .co_services li{
+   flex: 25%;
+ }
+ .continue{
+  margin-top: 15px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  
+  }
+  input::placeholder{
+    padding: 5px;
+  }
+  .form input{
+    height: 30px;
+  } 
+  .form textarea{
+    width: 100%;
+  }
+  @media screen and (max-width: 992px) {
+    .modalContainer {
+      width: 90%;
+      height: auto;
+      border-radius: 12px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      display: flex;
+      flex-direction: column;
+     
+      text-align: center;
+     
+    }
+    .co_services li{
+      flex: 33%;
+    }
+    
+  }
+  @media screen and (max-width: 600px) {
+    .co_services li {
+      flex: 50%;
+    }
+  }
+  .loginform{
+    padding: 12%;
+  }
+  .otp{
+    color: #fff;
+    width: 100%;
+    margin-top: 10px;
+  }
+.otp-i{
+  width: 40%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin-left: auto;
+  margin-right: auto;
+  outline: none;
+  
+}
+.verify{
+  padding: 10%;
+}
+.form input{
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  outline: none;
+ border: 1px solid black;
+ margin-top: 5px;
+
+}
+.form{
+  padding: 5%;
+  text-align: left;
+  
+}
+.choose-service input{
+width: auto;
+margin-left: 185px;
+padding: 5px;
+
+}
+.choose-service select{
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+.choose-service{
+ margin-top: 5px;}
+.submit{
+  color: #fff;
+  height: 40px!important;
+}
+.modalContainer h6{
+  margin-top: 0;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.continue h6{
+  display: inline-block;
+  width: 100px;
+}

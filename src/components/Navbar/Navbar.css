@@ -1,0 +1,59 @@
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .logo{
+    width: 100px;
+  }
+  .bg-black{
+    --bs-bg-opacity: .3;
+    background-color: rgba(var(--bs-black-rgb),var(--bs-bg-opacity))!important;
+  }
+  
+  
+.search-form {
+  width: 80%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.search-form input {
+  height: 100%;
+ 
+ 
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  height: 100%;
+  font-size: 1rem;
+}
+
+.search-form select {
+ 
+ 
+  padding: 1rem;
+  height: 100%;
+  font-size: 1rem;
+}
+
+
+.search-form button {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.search-form button svg {
+  width: 24px;
+  height: 24px;
+}
+.searchbar{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.searchbtn{
+  background-color: #fff;
+}
