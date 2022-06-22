@@ -1,3 +1,6 @@
+.back{
+    transition: 1s;
+}
 .section{
    transition: .2s;
     height: auto;

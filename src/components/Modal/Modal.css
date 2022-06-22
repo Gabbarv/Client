@@ -27,7 +27,18 @@
     flex-direction: column;
    z-index: 110;
     text-align: center;
+   animation: modal .3s;
    
+   
+  }
+  @keyframes modal{
+    from {
+      width: 0;
+      height: 0;
+    }to {
+      width: 50%;
+      height: auto;
+    }
   }
   
   .modalContainer .title {
@@ -113,12 +124,21 @@
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       display: flex;
       flex-direction: column;
-     
+      animation: modal .3s;
       text-align: center;
      
     }
     .co_services li{
       flex: 33%;
+    }
+    @keyframes modal{
+      from {
+        width: 0;
+        height: 0;
+      }to {
+        width: 90%;
+        height: auto;
+      }
     }
     
   }
