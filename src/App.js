@@ -11,7 +11,7 @@ function App() {
   <>
   <Router>
   <Routes>
-
+  <Route path='/Client' element={<Construction/>}/>
     <Route path='/' element={<Construction/>}/>
     <Route path='/9783243399/admin' element={<Admin/>}/>
   </Routes>
