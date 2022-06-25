@@ -86,29 +86,33 @@ const services = [
          name: "Birthday Party ",
          img:   "https://images.unsplash.com/photo-1602631985686-1bb0e6a8696e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
      },{
-         name: "Reception",
-         img:   "https://images.unsplash.com/photo-1633978555421-1e67d524b227?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+         name: "Catering And Halwai",
+         img:   "https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
      },{
          name: "wedding",
          img:   "https://images.unsplash.com/photo-1526092817387-8f07b2904e48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
      },{
-         name: "Weekends",
-         img:   "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
-     },]
+         name: "Cold fire/fog",
+         img:   "https://images.unsplash.com/photo-1542302979846-c49b846da354?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+     },
+     {
+        name: "Flower/Ballon/Theme/Decoration",
+        img:   "https://i.ibb.co/rcNLTFh/Untitled-design-2.png"
+    }]
     }, {
      title:  "Architecture",
      ser: [{
-         name: "House",
-         img:   "https://images.unsplash.com/photo-1564703048291-bcf7f001d83d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80"
+         name: "2D & 3D Floor Plans",
+         img:   "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
      },{
-         name: "School",
-         img:   "https://images.unsplash.com/photo-1494949649109-ecfc3b8c35df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
+         name: "2D & 3D Interior Layout Plans",
+         img:   "https://images.unsplash.com/photo-1497366672149-e5e4b4d34eb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
      },{
-         name: "Complex construction",
-         img:   "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=797&q=80"
+         name: "Structural Drawing",
+         img:   "https://images.unsplash.com/photo-1598368195835-91e67f80c9d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
      },{
-         name: "Simple construction ",
-         img:   "https://images.unsplash.com/photo-1512207736890-6ffed8a84e8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=879&q=80"
+         name: "3D Elevation ",
+         img:   "https://images.unsplash.com/photo-1641975440216-9d8d5409e5d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
      },]
     }, {
      title:  "Printing",

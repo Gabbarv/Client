@@ -11,20 +11,43 @@ function Admin(){
     const [email,setEmail]= useState("");
     const [password,setPassword] = useState("");
     const [login,setlogin] = useState(false);
+    const [users,setUsers] = useState();
 
     var auser = localStorage.getItem("adminuser");
 
     function getUser(){
-      var docRef = db.collection("buyer");
 
-docRef.get().then((doc) => {
-   console.log(doc);
-}).catch((error) => {
-    console.log("Error getting document:", error);
-});
+      var custemers=[];
+      db.collection("buyer").onSnapshot(snapshot => {
+
+        snapshot.docs.map(doc => {
+          custemers.push(doc.data())
+        })
+
+      
+        setUsers(custemers);
+        custemers = [];
+
+      })
+
+     
+      
+
+      
+     
     }
 
-    useEffect(()=> (getUser()));
+
+    useEffect(() => getUser(),[])
+    
+           
+       
+        
+      
+     
+      
+
+    
     
    function checklogin(){
     if(auser==="true"){
@@ -33,7 +56,7 @@ docRef.get().then((doc) => {
    }  
    useEffect(() => checklogin(),[])
 
-    useEffect(() => {},[email,password]);
+    useEffect(() => {},[email,password,users]);
 
     function signin(e){
 
@@ -66,30 +89,27 @@ return (
       <th scope="col">#</th>
       <th scope="col">Name</th>
       <th scope="col">Mobile No</th>
-      <th scope="col">Address</th>
       <th scope="col">Service</th>
-      <th scope="col">Attachment</th>
-      <th scope="col">Call Time</th>
+       <th scope="col">Status</th>
+       <th scope="col">Activity</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+
+    {users?.map((data,index) => (
+
+<tr>
+<th scope="row">{++index}</th>
+<td>{data.name}</td>
+<td>{data.mobileNo}</td>
+<td>{data.service}</td>
+<td>Not Seen</td>
+<td><button className="btn">View</button></td>
+
+</tr>
+    ))}
+    
+    
   </tbody>
 </table></div> :  <div className="loginformadmin">
     <h1>Admin Login</h1>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Modal.css";
 
-import {firebase,auth,db} from "../../firebase";
+import {firebase,auth,db,storage} from "../../firebase";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -18,6 +18,17 @@ function Loginmodal({info,setlogin,loggedIn,setLoggedin,iname,item}){
     const [final, setfinal] = useState('');
     const [name,setName] = useState("");
     const [address,setAddress] = useState("");
+    const [DateF,setDateF]= useState("");
+    const [DateT,setDateT]= useState("");
+    const [travelPlaceF,setTravelPlaceF] = useState("");
+    const [travelPlaceT,setTravelPlaceT] = useState("");
+    const [adult,setAdult] = useState("");
+    const[Child,setChild] = useState("");
+    const [otherDescription,setOtherDescription] = useState("");
+    const[visitTime,setVisitTime]= useState("");
+    const [file,setFile] = useState();
+    const [fileURL,setFileURL] = useState()
+
    
     
     
@@ -65,8 +76,11 @@ function Loginmodal({info,setlogin,loggedIn,setLoggedin,iname,item}){
        
    },[user]);
    useEffect((e) => {
-    console.log(otp)
-   },[mobNo,otp,name,address,callTime]);
+   
+   },[mobNo,otp,name,address,callTime,DateF,DateT,travelPlaceF,travelPlaceT,otherDescription,visitTime,adult,Child,file]);;
+   
+   
+   
    const handleSubmit = (e) => {
     e.preventDefault();
    let service = iname;
@@ -74,6 +88,72 @@ function Loginmodal({info,setlogin,loggedIn,setLoggedin,iname,item}){
    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
    var dateTime = date+' '+time;
+   if(item.travel){
+    db.collection("buyer")
+      .add({
+        name: name,
+        address: address,
+        mobileNo: phone,
+        service: service,
+        callTime: callTime,
+        submitTime: dateTime,
+        travelDateFrom: DateF,
+        travelDateTo: DateT,
+        Adult: adult,
+        child: Child,
+        travelPlaceFrom: travelPlaceF,
+        travelPlaceTo: travelPlaceT,
+        otherDescription: otherDescription
+      })
+      .then(() => {
+        
+        notify();
+
+      })
+      .catch((error) => {
+        alert(error.message);
+        
+      });
+
+   } else if (item.medicalTest){
+    if(file != null){
+   
+      storage.ref(`/file/${file.name}`).put(file)
+      .on("state_changed" , console.log(), (err) => alert(err), () => storage.ref(`/file/${file.name}`).put(file).snapshot.ref.getDownloadURL().then(url => setFileURL(url)) );
+    }
+    
+
+
+
+
+
+    db.collection("buyer")
+      .add({
+        name: name,
+        address: address,
+        mobileNo: phone,
+        service: service,
+        callTime: callTime,
+        submitTime: dateTime,
+        age: adult,
+        visitDate: DateF,
+        visitTime: visitTime,
+        otherDescription: otherDescription,
+        fileURL: fileURL
+
+
+      })
+      .then(() => {
+        
+        notify();
+
+      })
+      .catch((error) => {
+        alert(error.message);
+        
+      });
+
+   } else {
     db.collection("buyer")
       .add({
         name: name,
@@ -93,8 +173,12 @@ function Loginmodal({info,setlogin,loggedIn,setLoggedin,iname,item}){
         
       });
 
+   }
+    
     setName("");
     setAddress("");
+    setFileURL();
+    setFile();
     
   };
    
@@ -259,22 +343,22 @@ const ValidateOtp = (e) => {
               <div className="row">
                 <div className="col-sm-6">
                   <label>From:</label> <br/>
-                  <input type="date" />
+                  <input onChange={(e) => setDateF(e.target.value)} type="date" />
                 </div>
                 <div className="col-sm-6">
                 <label>To:</label> <br/>
-                  <input type="date" />
+                  <input onChange={(e) => setDateT(e.target.value)} type="date" />
                 </div>
               </div>
               <label>Travel Place</label>
               <div className="row">
                 <div className="col-sm-6">
                 <label>From:</label> <br/>
-                  <input type="text" />
+                  <input onChange={(e) => setTravelPlaceF(e.target.value)} type="text" />
                 </div>
                 <div className="col-sm-6">
-                <label>From:</label> <br/>
-                  <input type="text" />
+                <label>To:</label> <br/>
+                  <input onChange={(e) => setTravelPlaceT(e.target.value)} type="text" />
                 </div>
               </div>
               <label>Total Member</label>
@@ -282,34 +366,34 @@ const ValidateOtp = (e) => {
                 
                 <div className="col-sm-6">
                 <label>Adult</label> <br/>
-                  <input type="number" />
+                  <input onChange={(e) => setAdult(e.target.value)} type="number" />
                 </div>
                 <div className="col-sm-6">
                 <label>Children</label> <br/>
-                  <input type="number" />
+                  <input onChange={(e) => setChild(e.target.value)} type="number" />
                 </div>
               </div>
 
               <label>Other Description <span>(Optional)</span></label>
-              <textarea rows="4"  onChange={(e) => setAddress(e.target.value)}></textarea>
+              <textarea rows="4"  onChange={(e) => setOtherDescription(e.target.value)}></textarea>
              </div>}
 
             {item.medicalTest && <div className="medicalTest">
             
                   <label>Age</label>
-                   <input type="number"/>
+                   <input onChange={(e) => setAdult(e.target.value)} type="number"/>
             
               <label>Visit Time For Sample Collect:</label>
               <div className="row">
                 <div className="col-sm-6">
                   <label>Date</label>
-                  <input type="date"/>
+                  <input onChange={(e) => setDateF(e.target.value)} type="date"/>
                 </div>
                 <div className="col-sm-6">
                 <lable>Time</lable>
                   <div className="choose-service">
                   
-              <select onChange={(e) => setCallTime(e.target.value)} name="callingtime">
+              <select onChange={(e) => setVisitTime(e.target.value)} name="callingtime">
               <option value="Any Time">Any Time</option>
               <option value="Morning(8 A.M to 12 P.M)">Morning(8 A.M to 12 P.M) </option>
               <option value="Afternoon(12 P.M to 4 P.M)">Afternoon(12 P.M to 4 P.M)</option>
@@ -318,8 +402,19 @@ const ValidateOtp = (e) => {
               </div>
                 </div>
               </div>
+              <div class="mb-3">
+  <label>Upload Prescription in PDF Or JPG format</label>
+  <input onChange={(e) => { if(e.target.files[0].size > 500000){
+    alert("File Size Should Be Less Than 500KB");
+    e.target.value =''
+  } else {
+    setFile(e.target.files[0]);
+  }
+
+  }} class="form-control" type="file" id="formFile" accept="image/*,.pdf"/>
+</div>
               <label>Other Description <span>(Optional)</span></label>
-              <textarea rows="4"  onChange={(e) => setAddress(e.target.value)}></textarea>
+              <textarea rows="4"  onChange={(e) => setOtherDescription(e.target.value)}></textarea>
              </div>}
 
              
