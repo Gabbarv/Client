@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Modal.css";
-import Verify from "./Verify";
+
 import {firebase,auth,db} from "../../firebase";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-function Loginmodal({info,setlogin,loggedIn,setLoggedin,iname}){
+function Loginmodal({info,setlogin,loggedIn,setLoggedin,iname,item}){
     var [showLogin,setShowlogin] = useState(false);
     var [showOtp,setShowOtp]=useState(false);
     const [showForm,setShowForm]=useState(false);
@@ -18,12 +18,20 @@ function Loginmodal({info,setlogin,loggedIn,setLoggedin,iname}){
     const [final, setfinal] = useState('');
     const [name,setName] = useState("");
     const [address,setAddress] = useState("");
+   
+    
+    
+
     
     const notify = () => toast("Thanks For Your Response.We Will Contact You Soon");
     const phone= localStorage.getItem("phone");
     const user = localStorage.getItem("user");
     
     const [counter,setCounter] = useState(30);
+
+    
+
+   
     
     
     useEffect(() => {
@@ -217,17 +225,22 @@ const ValidateOtp = (e) => {
          
           setShowForm(false);
           setlogin(false);}}>
-              <label>Full Name</label>
+             <div> <label>Full Name</label>
               <input onChange={(e) => setName(e.target.value)}  type="text" placeholder="Enter Your Name" required/>
               <label>Mobile No</label>
               <input  value={phone} type="text" disabled/>
               <label>Address <span>(Optional)</span></label>
               <textarea rows="4"  onChange={(e) => setAddress(e.target.value)}></textarea>
-              <div className="choose-service">
-              <label for="service">Selected Service:</label>
+              
+              
+              
+              <div className="row">
+                <div className="col-sm-6">
+                <label for="service">Selected Service:</label>
               <input type="text" name="service" value={iname} disabled/>
-              </div>
-              <div className="choose-service">
+                </div>
+                <div className="col-sm-6">
+                <div className="choose-service">
               <label for="service">Available Time To Take Call:</label>
               <select onChange={(e) => setCallTime(e.target.value)} name="callingtime">
               <option value="Any Time">Any Time</option>
@@ -235,10 +248,86 @@ const ValidateOtp = (e) => {
               <option value="Afternoon(12 P.M to 4 P.M)">Afternoon(12 P.M to 4 P.M)</option>
               <option value="Evening(4 P.M to 9 P.M)">Evening(4 P.M to 9 P.M)</option>
               </select>
-
               </div>
-              
-              <input className="btn bg-dark submit" type="submit" value="Submit"/>
+                </div>
+              </div>
+             
+             </div>
+            
+          {item.travel && <div className="travel">
+              <label>Travel Date</label>
+              <div className="row">
+                <div className="col-sm-6">
+                  <label>From:</label> <br/>
+                  <input type="date" />
+                </div>
+                <div className="col-sm-6">
+                <label>To:</label> <br/>
+                  <input type="date" />
+                </div>
+              </div>
+              <label>Travel Place</label>
+              <div className="row">
+                <div className="col-sm-6">
+                <label>From:</label> <br/>
+                  <input type="text" />
+                </div>
+                <div className="col-sm-6">
+                <label>From:</label> <br/>
+                  <input type="text" />
+                </div>
+              </div>
+              <label>Total Member</label>
+              <div className="row">
+                
+                <div className="col-sm-6">
+                <label>Adult</label> <br/>
+                  <input type="number" />
+                </div>
+                <div className="col-sm-6">
+                <label>Children</label> <br/>
+                  <input type="number" />
+                </div>
+              </div>
+
+              <label>Other Description <span>(Optional)</span></label>
+              <textarea rows="4"  onChange={(e) => setAddress(e.target.value)}></textarea>
+             </div>}
+
+            {item.medicalTest && <div className="medicalTest">
+            
+                  <label>Age</label>
+                   <input type="number"/>
+            
+              <label>Visit Time For Sample Collect:</label>
+              <div className="row">
+                <div className="col-sm-6">
+                  <label>Date</label>
+                  <input type="date"/>
+                </div>
+                <div className="col-sm-6">
+                <lable>Time</lable>
+                  <div className="choose-service">
+                  
+              <select onChange={(e) => setCallTime(e.target.value)} name="callingtime">
+              <option value="Any Time">Any Time</option>
+              <option value="Morning(8 A.M to 12 P.M)">Morning(8 A.M to 12 P.M) </option>
+              <option value="Afternoon(12 P.M to 4 P.M)">Afternoon(12 P.M to 4 P.M)</option>
+              <option value="Evening(4 P.M to 9 P.M)">Evening(4 P.M to 9 P.M)</option>
+              </select>
+              </div>
+                </div>
+              </div>
+              <label>Other Description <span>(Optional)</span></label>
+              <textarea rows="4"  onChange={(e) => setAddress(e.target.value)}></textarea>
+             </div>}
+
+             
+             
+     
+                
+                
+                <input className="btn bg-dark submit" type="Submit" value="Submit"/>
           </form>
       </div>
       </div>}

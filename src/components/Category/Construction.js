@@ -5,7 +5,7 @@ import "./Category.css";
 import { ToastContainer, toast } from 'react-toastify';
 
 import Navbar from "../Navbar/Navbar";
-import Modal from "../Modal/Modal";
+
 import Footer from "../Footer/Footer";
 import services from "../../data";
 import Carousel from 'react-elastic-carousel';

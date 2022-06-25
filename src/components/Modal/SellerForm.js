@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Modal.css";
-import Verify from "./Verify";
+
 import {firebase,auth,db} from "../../firebase";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

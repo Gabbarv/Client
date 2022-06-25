@@ -182,7 +182,35 @@ const services = [
          name: "Mehndi",
          img:   "https://images.unsplash.com/photo-1583878544826-8f8c418033ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
      }]
-    }
+    },
+     {
+        title:  "Car/Taxi Booking on Rent",
+        ser: [{
+            name: "Car/Taxi",
+            img:   "https://images.unsplash.com/photo-1529369623266-f5264b696110?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+            travel: true
+        },{
+            name: "Bus",
+            img:   "https://images.unsplash.com/photo-1579985081815-efd0d0729c23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+            travel: true
+        },{
+            name: "Pick-up",
+            img:   "https://images.unsplash.com/photo-1602032071750-597bcf737afa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+            travel: true
+        },{
+            name: "Load-body",
+            img:   "https://images.unsplash.com/photo-1519003722824-194d4455a60c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=875&q=80",
+            travel: true
+        }]
+       },
+       {
+        title:  "Medical Testing",
+        ser: [{
+            name: "Blood Testing",
+            img:   "https://images.unsplash.com/photo-1615461066159-fea0960485d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1016&q=80",
+            medicalTest: true
+        },]
+       }
  ]
 
  export default services;

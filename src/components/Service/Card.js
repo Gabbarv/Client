@@ -21,7 +21,7 @@ function Card({item,loggedIn,setLoggedin}){
         <img src={item.img}/>
         <p>{item.name}</p>
         </div>}
-        {showLogin && <Loginmodal iname={item.name} loggedIn={loggedIn} setLoggedin={setLoggedin} setlogin={setShowlogin}/>}
+        {showLogin && <Loginmodal item={item} iname={item.name} loggedIn={loggedIn} setLoggedin={setLoggedin} setlogin={setShowlogin}/>}
       
         
     </>
